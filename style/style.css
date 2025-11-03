@@ -1,12 +1,61 @@
 
-/* Nav Bar CSS taken from W3Schools */
+/* Nav Bar CSS taken from W3Schools https://www.w3schools.com/Css/css_navbar_horizontal.asp (the ul css) */
+/* to understand using grid, I used https://www.w3schools.com/css/css_grid_item_name.asp for a template and I used AI tools to trouble shoot issues and how to make footer remain at bottom with no white space*/
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+  'header header header'
+  'main main main'
+  'footer footer footer';
+}
+
+header {
+  grid-area: header;
+}
+ 
 body {
   margin: 0;
   padding: 0;
+  
+}  
+
+main {
+  grid-area: main;
+  margin: 10px;
 }
 
-h2, p {
-  margin: 10px;
+
+
+
+
+footer {
+  background-color: #333333;
+  padding: 20px;
+  grid-area: footer;
+  
+}
+
+
+
+.myorder {
+   
+  margin: 15px;
+  
+  
+  
+}
+
+input[type="text"] {
+  margin-bottom: 10px ;
+  outline: none;
+
+}
+
+.navbar {
+   border-radius: 5px;
 }
 
 ul {
@@ -32,3 +81,12 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+.order, .submit {
+  margin: 20px;
+  padding: 5px;
+  
+}
+
+
+  
